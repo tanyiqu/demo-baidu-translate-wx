@@ -10,12 +10,20 @@ Page({
       '翻译成英文'
     ],
     index: 0,
+    input: '', // 待翻译的文本
     translation: '译文'
   },
 
+  // 文本输入
+  onInput(e) {
+    this.setData({
+      input: e.detail.value
+    });
+  },
+
   // 翻译
-  translate(){
-    console.log('翻译');
+  translate() {
+    console.log(`翻译 [${this.data.input}]`);
   },
 
   // 选择语言

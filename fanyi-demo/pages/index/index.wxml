@@ -9,7 +9,8 @@
   </picker>
 
   <!-- 输入区域 -->
-  <textarea class="input-area" placeholder='在此输入要翻译的文本' placeholder-style="color: #8995a1"></textarea>
+  <textarea class="input-area" placeholder="在此输入要翻译的文本" bindinput="onInput" bindconfirm="translate"
+    placeholder-style="color: #8995a1"></textarea>
 
 
   <!-- <textarea class="output-area" placeholder='译文' placeholder-style="color: #8995a1" value="{{translation}}"></textarea> -->
