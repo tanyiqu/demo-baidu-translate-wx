@@ -5,7 +5,24 @@ Page({
    * 页面的初始数据
    */
   data: {
+    array: [
+      '翻译成中文',
+      '翻译成英文'
+    ],
+    index: 0,
+    translation: '译文'
+  },
 
+  // 翻译
+  translate(){
+    console.log('翻译');
+  },
+
+  // 选择语言
+  bindPickerChange(e) {
+    this.setData({
+      index: e.detail.value
+    });
   },
 
   /**
