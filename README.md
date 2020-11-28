@@ -8,14 +8,12 @@
 内容如下：
 
 ```javascript
-const appid = 'xxxxxxxxxx';
-const key = 'xxxxxxxxxx';
+const appid = 'xxxxxx';
+const key = 'xxxxxxx';
 
-module.exports = {
-  key: {
-    appid: appid,
-    key: key
-  }
+module.exports.KEY = {
+  appid: appid,
+  key: key
 }
 ```
 
