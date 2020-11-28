@@ -1,4 +1,11 @@
 // pages/index/index.js
+
+// let trans = require('../../utils/api.js');
+
+import {
+  trans
+} from '../../utils/trans.js';
+
 Page({
 
   /**
@@ -22,8 +29,23 @@ Page({
   },
 
   // 翻译
-  translate() {
+  async translate() {
+    // 获取翻译文本
+    let q = this.data.input;
+    if (q.trim() === '') {
+      return;
+    }
     console.log(`翻译 [${this.data.input}]`);
+
+    // 获取翻译
+    let type = parseInt(this.data.index);
+    let data = await trans(q, type);
+
+    // 显示在页面上
+    this.setData({
+      translation: data
+    });
+
   },
 
   // 选择语言
